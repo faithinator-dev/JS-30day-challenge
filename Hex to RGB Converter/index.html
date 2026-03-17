@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex to RGB Converter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0f172a;
+            color: #ffffff;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 50px 40px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 1.1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #3b82f6;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        #rgbOutput {
+            margin-top: 25px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            min-height: 30px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Hex to RGB Converter</h1>
+        <input type="text" id="hexInput" placeholder="Enter hex color (e.g., #FF5733)" autocomplete="off">
+        <button onclick="convertHexToRgb()">Convert</button>
+        <p id="rgbOutput"></p>
+    </div>
+
+    <script>
+        function convertHexToRgb() {
+            const hex = document.getElementById('hexInput').value;
+            const rgbOutput = document.getElementById('rgbOutput');
+
+            const cleanHex = hex.replace('#', '');
+
+            const r = parseInt(cleanHex.substr(0, 2), 16);
+            const g = parseInt(cleanHex.substr(2, 2), 16);
+            const b = parseInt(cleanHex.substr(4, 2), 16);
+
+            if (isNaN(r) || isNaN(g) || isNaN(b)) {
+                rgbOutput.textContent = 'Invalid Hex Code';
+                rgbOutput.style.color = '#ef4444';  
+                return;
+            }
+
+            rgbOutput.textContent = `RGB: (${r}, ${g}, ${b})`;
+            rgbOutput.style.color = '#60a5fa';  
+        }
+    </script>
+</body>
+</html>

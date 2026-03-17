@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vowel Counter | Clean UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Vowel Counter</h1>
+
+      <textarea
+        id="textInput"
+        placeholder="Paste or type your text here..."
+      ></textarea>
+
+      <div class="results-container">
+        <div class="total-badge">
+          <span>TOTAL VOWELS</span>
+          <span class="total-number" id="totalCount">0</span>
+        </div>
+
+        <div class="breakdown-grid">
+          <div class="vowel-card">
+            <div class="vowel-letter">A</div>
+            <div class="vowel-count" id="countA">0</div>
+          </div>
+          <div class="vowel-card">
+            <div class="vowel-letter">E</div>
+            <div class="vowel-count" id="countE">0</div>
+          </div>
+          <div class="vowel-card">
+            <div class="vowel-letter">I</div>
+            <div class="vowel-count" id="countI">0</div>
+          </div>
+          <div class="vowel-card">
+            <div class="vowel-letter">O</div>
+            <div class="vowel-count" id="countO">0</div>
+          </div>
+          <div class="vowel-card">
+            <div class="vowel-letter">U</div>
+            <div class="vowel-count" id="countU">0</div>
+          </div>
+        </div>
+
+        <button class="btn" onclick="clearText()">Clear Text</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

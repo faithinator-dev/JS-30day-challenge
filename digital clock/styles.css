@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #050505;
+    color: white;
+    padding: 20px;
+}
+
+.clock-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    padding: 60px 80px;
+    text-align: center;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        inset 0 0 40px rgba(255, 255, 255, 0.02);
+    position: relative;
+}
+
+.date-display {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #4facfe;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(79, 172, 254, 0.4);
+}
+
+.time-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+}
+
+.time {
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -4px;
+    background: linear-gradient(to bottom, #ffffff, #888888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.seconds-ampm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.seconds {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00f2fe;
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+}
+
+.ampm {
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+.toggle-btn {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: #00f2fe;
+}
+
+@media (max-width: 600px) {
+    .clock-card { padding: 40px 30px; }
+    .time { font-size: 4rem; }
+    .seconds { font-size: 1.5rem; }
+}

@@ -1,46 +1,34 @@
-const decrementBtn = document.getElementById('decrement');
-const incrementBtn = document.getElementById('increment');
-const counterDisplay = document.getElementById('counter');
-const autoCount = document.getElementById('autoCount');
-const resetBtn = document.getElementById('reset');
+        let count = 0;
+        const valueDisplay = document.getElementById('value');
+        const decreaseBtn = document.getElementById('decreaseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const increaseBtn = document.getElementById('increaseBtn');
 
-let counter = 0;
-let intervalId;
+        function updateDisplay() {
+            valueDisplay.textContent = count;
+            
+            valueDisplay.classList.remove('positive', 'negative', 'zero');
+            
+            if (count > 0) {
+                valueDisplay.classList.add('positive');
+            } else if (count < 0) {
+                valueDisplay.classList.add('negative');
+            } else {
+                valueDisplay.classList.add('zero');
+            }
+        }
 
-function updateCounter() {
-    counterDisplay.textContent = counter;
-}
+        decreaseBtn.addEventListener('click', () => {
+            count--;
+            updateDisplay();
+        });
 
-decrementBtn.addEventListener('click', () => {
-    if (counter > 0) {
-        counter--;
-        updateCounter();
-    }
-});
+        increaseBtn.addEventListener('click', () => {
+            count++;
+            updateDisplay();
+        });
 
-incrementBtn.addEventListener('click', () => {
-    counter++;
-    updateCounter();
-});
-
-updateCounter(); 
-
-autoCount.addEventListener('click', (e) => {
-    if (e.target.id === 'start') {
-        autoCount.innerHTML = `<button id="pause">Pause</button>`;
-        intervalId = setInterval(() => {
-            counter++;
-            updateCounter();
-        }, 1000);
-    } else if (e.target.id === 'pause') {
-        autoCount.innerHTML = `<button id="start">Start</button>`;
-        clearInterval(intervalId);
-    }
-});
-
-    resetBtn.addEventListener('click', () => {
-        clearInterval(intervalId);
-        counter = 0;
-        updateCounter();
-        autoCount.innerHTML = `<button id="start">Start</button>`;
-    });
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            updateDisplay();
+        });

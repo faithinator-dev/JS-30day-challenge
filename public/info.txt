@@ -29,3 +29,34 @@ Day 27: Custom Video Player - Take control of an HTML5 video with your own styli
 Day 28: Typing Speed Test - Find out how fast you can type (WPM) by comparing your text to a sample.
 Day 29: Notes App - A proper app where you can create, edit, and save multiple notes using Local Storage.
 Day 30: Developer Dashboard - The ultimate final project! Combine a clock, weather, and tasks into one personalized home screen. You're basically a full-stack dev now!
+
+
+
+
+
+ As you continue your 30 Days of Coding challenge, your workflow will look like this:
+
+
+  1. Daily Development
+  Every day, you'll pick the next project from your roadmap (e.g., Day 9: Tip Calculator).
+   * Create a new folder inside public/ (e.g., public/tip-calculator/).
+   * Build your index.html, style.css, and script.js inside that folder.
+
+
+  2. Updating the Portfolio
+  Once you finish a project, you'll "activate" it on your main portfolio page:
+   * Open public/index.html.
+   * Move that project's card from the upcoming section to the active section.
+   * Change the div to an <a> tag and point the href to your new folder.
+   * Update your Progress Bar percentage (e.g., move it from 27% to 30%).
+
+
+  3. Deployment & Sharing
+  Since you have Firebase configured (firebase.json), you can run firebase deploy to update your live site. This makes it easy   
+  to:
+   * Track Progress: You can see your roadmap filling up as the "upcoming" cards turn into active links.
+   * Showcase: You have a single, professional link to share with others that proves your consistency and growth over the 30     
+     days.
+
+
+  It turns your coding practice into a visual story of your progress!

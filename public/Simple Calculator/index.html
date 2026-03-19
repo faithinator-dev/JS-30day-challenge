@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="screen">
+            <div class="previous-operand" id="previous-operand"></div>
+            <div class="current-operand" id="current-operand">0</div>
+        </div>
+
+        <div class="keypad">
+            <button class="clear" onclick="calculator.clear()">AC</button>
+            <button class="operator" onclick="calculator.delete()">DEL</button>
+            <button class="operator" onclick="calculator.chooseOperation('÷')">÷</button>
+            <button class="operator" onclick="calculator.chooseOperation('×')">×</button>
+
+            <button onclick="calculator.appendNumber('7')">7</button>
+            <button onclick="calculator.appendNumber('8')">8</button>
+            <button onclick="calculator.appendNumber('9')">9</button>
+            <button class="operator" onclick="calculator.chooseOperation('-')">−</button>
+
+            <button onclick="calculator.appendNumber('4')">4</button>
+            <button onclick="calculator.appendNumber('5')">5</button>
+            <button onclick="calculator.appendNumber('6')">6</button>
+            <button class="operator" onclick="calculator.chooseOperation('+')">+</button>
+
+            <button onclick="calculator.appendNumber('1')">1</button>
+            <button onclick="calculator.appendNumber('2')">2</button>
+            <button onclick="calculator.appendNumber('3')">3</button>
+            <button class="equals" onclick="calculator.compute()">=</button>
+            <button onclick="calculator.appendNumber('0')" style="grid-column: span 2;">0</button>
+            <button onclick="calculator.appendNumber('.')">.</button>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

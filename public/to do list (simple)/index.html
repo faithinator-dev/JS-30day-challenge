@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="todo-card">
+        <h1>My Tasks</h1>
+        
+        <div class="input-group">
+            <input type="text" id="todoInput" placeholder="Add a new task..." autocomplete="off">
+            <button class="add-btn" id="addBtn">+</button>
+        </div>
+
+        <ul class="todo-list" id="todoList">
+        </ul>
+
+        <div id="emptyState" class="empty-state">
+            No tasks today! Add something new.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

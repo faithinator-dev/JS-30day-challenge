@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: #f4f7f6;
+  padding: 40px 20px;
+  color: #333;
+}
+.container {
+  width: 100%;
+  max-width: 450px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.balance-card {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+.balance-card h4 {
+  text-transform: uppercase;
+  color: #888;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.balance-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1a202c;
+}
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 20px;
+}
+.stat-item {
+  flex: 1;
+}
+.stat-item:first-child {
+  border-right: 1px solid #f0f0f0;
+}
+.stat-item h4 {
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+}
+.stat-item p {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.money-plus {
+  color: #10b981;
+}
+.money-minus {
+  color: #ef4444;
+}
+
+h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin: 30px 0 15px 0;
+  font-size: 1.1rem;
+}
+.list {
+  list-style: none;
+}
+.list li {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: 0.2s;
+  border-right: 5px solid #ccc;
+}
+.list li.plus {
+  border-right-color: #10b981;
+}
+.list li.minus {
+  border-right-color: #ef4444;
+}
+.delete-btn {
+  cursor: pointer;
+  background-color: #ef4444;
+  color: #fff;
+  border: 0;
+  font-size: 14px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+input {
+  border: 2px solid #eee;
+  border-radius: 12px;
+  display: block;
+  font-size: 1rem;
+  padding: 12px 15px;
+  width: 100%;
+  outline: none;
+  transition: 0.2s;
+}
+input:focus {
+  border-color: #333;
+}
+.btn {
+  cursor: pointer;
+  background-color: #1a202c;
+  border: 0;
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 20px 0;
+  padding: 15px;
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}

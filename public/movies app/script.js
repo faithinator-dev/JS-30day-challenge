@@ -3,13 +3,10 @@ const API_KEY = '5824f9cd';
         const grid = document.getElementById('grid');
         const loading = document.getElementById('loading');
 
-        topsearch()
-
         async function searchMovies(query) {
             if(!query) return;
             loading.style.display = 'block';
             try {
-                // https://www.omdbapi.com/?s=${query}&apikey=5824f9cd
                 const res = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`);
                 const data = await res.json();
                 

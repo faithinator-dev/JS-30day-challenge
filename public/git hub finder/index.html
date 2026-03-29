@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center; margin-bottom:30px; letter-spacing:-1px;">GitHub Finder</h1>
+        <div class="search-box">
+            <input type="text" id="username" placeholder="Enter username (e.g. faithinator)">
+            <button class="btn-search" id="search-btn">Search</button>
+        </div>
+
+        <div id="error" class="error">User not found</div>
+
+        <div class="profile-card" id="profile">
+            <div class="top-info">
+                <img src="" id="avatar" class="avatar">
+                <div class="names">
+                    <h2 id="name">Name</h2>
+                    <a href="" id="url" target="_blank">@username</a>
+                </div>
+            </div>
+            
+            <p class="bio" id="bio">User bio goes here...</p>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Repos</span>
+                    <span class="stat-val" id="repos">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Followers</span>
+                    <span class="stat-val" id="followers">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Following</span>
+                    <span class="stat-val" id="following">0</span>
+                </div>
+            </div>
+
+            <a href="" id="view-profile" class="repo-link" target="_blank">View Full Profile</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0d1117;
+  color: white;
+  padding: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 550px;
+}
+.search-box {
+  background: #161b22;
+  border-radius: 16px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #30363d;
+}
+input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+.btn-search {
+  background: #21262d;
+  color: white;
+  border: 1px solid #30363d;
+  padding: 0 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.btn-search:hover {
+  background: #30363d;
+}
+.profile-card {
+  background: #161b22;
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid #30363d;
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.top-info {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #30363d;
+}
+.names h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.names a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.bio {
+  color: #8b949e;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.stats {
+  background: #0d1117;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.stat-item span {
+  display: block;
+}
+.stat-label {
+  font-size: 0.75rem;
+  color: #8b949e;
+  margin-bottom: 5px;
+}
+.stat-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.repo-link {
+  display: block;
+  text-align: center;
+  background: #238636;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.repo-link:hover {
+  background: #2ea043;
+}
+.error {
+  color: #f85149;
+  text-align: center;
+  display: none;
+}

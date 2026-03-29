@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmosphere | Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="weather-card">
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Search City (e.g. Lagos, London)">
+        </div>
+
+        <div id="weather-content" class="weather-info">
+            <h2 class="city-name" id="city">Lagos</h2>
+            <p class="date" id="date">Thursday, March 12</p>
+
+            <div class="temp-display" id="temp">28°C</div>
+            <p class="condition" id="desc">Partly Cloudy</p>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-val" id="humidity">65%</span>
+                    <span class="stat-label">Humidity</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val" id="wind">12km/h</span>
+                    <span class="stat-label">Wind</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="error" class="error">City not found. Please try again.</div>
+
+        <p style="font-size: 0.7rem; color: #475569; text-align: center; margin-top: 30px;">
+            Note: created by faith with open weather api.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

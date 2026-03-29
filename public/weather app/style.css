@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    width: 100%;
+    max-width: 450px;
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+input {
+    width: 100%;
+    padding: 18px 25px;
+    border-radius: 16px;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #4facfe;
+}
+
+.weather-info {
+    text-align: center;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.city-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.date {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.temp-display {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -3px;
+}
+
+.condition {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: #4facfe;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-val {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.error {
+    color: #ef4444;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}

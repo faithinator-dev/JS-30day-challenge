@@ -1,12 +1,87 @@
- * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f0f2f5; padding: 20px; }
-        .card { background: white; width: 100%; max-width: 400px; border-radius: 30px; padding: 40px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.05); transition: 0.3s; }
-        .user-img { width: 130px; height: 130px; border-radius: 50%; border: 5px solid #4facfe; margin: 0 auto 25px auto; padding: 5px; object-fit: cover; }
-        .name { font-size: 1.5rem; font-weight: 800; color: #1a202c; margin-bottom: 5px; }
-        .username { color: #4facfe; font-weight: 600; font-size: 0.9rem; margin-bottom: 25px; }
-        .info-grid { border-top: 1px solid #f0f0f0; padding-top: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
-        .info-item label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; display: block; margin-bottom: 5px; }
-        .info-item span { font-size: 0.9rem; font-weight: 600; color: #4a5568; }
-        .btn { width: 100%; padding: 18px; border: none; background: #1a202c; color: white; font-weight: 700; border-radius: 16px; cursor: pointer; transition: 0.3s; margin-top: 35px; }
-        .btn:hover { background: #000; transform: translateY(-2px); }
-        .loading { opacity: 0.5; pointer-events: none; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+  padding: 20px;
+}
+.card {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 30px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+.user-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 5px solid #4facfe;
+  margin: 0 auto 25px auto;
+  padding: 5px;
+  object-fit: cover;
+}
+.name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 5px;
+}
+.username {
+  color: #4facfe;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+.info-grid {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  text-align: left;
+}
+.info-item label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+}
+.info-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+.btn {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  background: #1a202c;
+  color: white;
+  font-weight: 700;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 35px;
+}
+.btn:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}

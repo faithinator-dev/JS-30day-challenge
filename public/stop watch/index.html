@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precision Stopwatch</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="stopwatch-card">
+      <h2
+        style="
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #4facfe;
+          margin-bottom: 20px;
+          font-weight: 800;
+        "
+      >
+        Stopwatch
+      </h2>
+      <div class="display" id="display">00:00:00</div>
+
+      <div class="controls">
+        <button class="btn btn-reset" id="reset">Reset</button>
+        <button class="btn btn-start" id="start">▶</button>
+        <button class="btn btn-pause" id="pause">II</button>
+        <button
+          class="btn btn-start"
+          id="lap"
+          style="background: #f1f5f9; color: #4facfe"
+        >
+          Lap
+        </button>
+      </div>
+
+      <div class="laps-container" id="laps">
+      </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+  </body>
+</html>

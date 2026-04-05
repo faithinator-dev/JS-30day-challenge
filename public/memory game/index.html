@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match | Brain Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 style="margin-bottom: 30px; letter-spacing: -1px;">MEMORY MATCH</h1>
+        <div class="stats">
+            <div class="stat-item"><span id="moves">0</span><div class="stat-label">Moves</div></div>
+            <div class="stat-item"><span id="matches">0/8</span><div class="stat-label">Matches</div></div>
+        </div>
+        
+        <div class="grid" id="grid"></div>
+
+        <button class="btn-restart" onclick="initGame()">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fdfdfd;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #2d3748;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.search-box {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+  background: #f7fafc;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #edf2f7;
+}
+input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  outline: none;
+}
+.btn-search {
+  background: #4facfe;
+  color: white;
+  border: none;
+  padding: 0 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.btn-search:hover {
+  background: #00f2fe;
+}
+
+.word-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  display: none;
+}
+.word-title h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  color: #1a202c;
+  line-height: 1;
+}
+.phonetic {
+  color: #4facfe;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.audio-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(79, 172, 254, 0.1);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4facfe;
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+.audio-btn:hover {
+  background: #4facfe;
+  color: white;
+}
+
+.meaning-section {
+  margin-bottom: 40px;
+  display: none;
+}
+.part-of-speech {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+.part-of-speech::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #edf2f7;
+}
+.sub-heading {
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.definition-list {
+  list-style: none;
+}
+.definition-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.definition-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4facfe;
+  font-weight: 800;
+}
+.example {
+  color: #718096;
+  margin-top: 5px;
+}
+.error {
+  text-align: center;
+  padding: 100px 0;
+  display: none;
+}

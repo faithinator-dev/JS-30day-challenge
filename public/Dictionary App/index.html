@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faxicon | ONLINE Dictionary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search any word...">
+            <button class="btn-search" id="search-btn">Search</button>
+        </div>
+
+        <div id="error" class="error">
+            <h2 style="font-size: 2rem; margin-bottom: 10px;">('_')</h2>
+            <h3>No Definitions Found</h3>
+            <p style="color: #718096; margin-top: 10px;">We couldn't find definitions for the word you're looking for.</p>
+        </div>
+
+        <div id="result">
+            <div class="word-header" id="word-header">
+                <div class="word-title">
+                    <h1 id="word">Word</h1>
+                    <p class="phonetic" id="phonetic">/phonetic/</p>
+                </div>
+                <button class="audio-btn" id="audio-btn">|></button>
+            </div>
+
+            <div id="meanings">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Player | Custom UI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudFlare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="player-container">
+      <video id="video" src="video/hero-videos andrill pryvedenets.mp4"></video>
+
+      <div class="controls">
+        <div class="progress-container" id="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="buttons-row">
+          <div class="left-btns">
+            <button id="play-pause">▶</button>
+            <button id="stop"><i class="fas fa-stop"></i></button>
+            <div class="volume-container">
+              <span class="speaker"><i class="fas fa-volume-high"></i></span>
+              <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.1"
+                value="1"
+              />
+            </div>
+            <span id="timestamp" style="font-size: 0.9rem; color: #040a1e"
+              >00:00</span
+            >
+          </div>
+
+          <div class="right-btns">
+            <select id="speed">
+              <option value="0.5">0.5x</option>
+              <option value="1" selected>1x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2x</option>
+            </select>
+            <button id="fullscreen">⛶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

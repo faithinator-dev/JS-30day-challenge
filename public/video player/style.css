@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+body {
+  background: #050505;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.player-container {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+video {
+  width: 100%;
+  display: block;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.player-container:hover .controls {
+  opacity: 1;
+}
+
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.progress-bar {
+  height: 100%;
+  background: #040a1e;
+  border-radius: 10px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+#speed {
+  color: #040a1e;
+  border-radius: 10px;
+  background-color: rgb(151, 169, 228, 0.5);
+}
+.speaker {
+  cursor: pointer;
+}
+
+.buttons-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.right-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #040a1e;
+}
+
+button {
+  background: none;
+  border: none;
+  color: rgb(5, 5, 26);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+button:hover {
+  transform: scale(1.1);
+  color: #1f2990;
+}
+
+input[type="range"] {
+  accent-color: #0f1c47;
+  cursor: pointer;
+}
+.volume-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+select {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(8, 55, 136, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
